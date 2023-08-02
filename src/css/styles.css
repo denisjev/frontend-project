@@ -1,25 +1,28 @@
-table, tr {
-  border-color: black;
-  border-style: solid;
-  border-width: 1px;
+table {
   border-collapse: collapse;
   width: 100%;
 }
 
-td {
-  padding: 25px;
+tr {
+  border: 1px solid black;
 }
 
-.stripped-table {
-  border-collapse: collapse;
-  width: 100%;
+th {
+  background-color: black;
+  color: white;
+  font-family: 'Courier New', Courier, monospace;
 }
 
-.stripped-table th, td {
-  text-align: left;
-  padding: 8px;
+th:hover {
+  cursor: pointer
 }
 
-.stripped-table > tbody > tr:nth-child(even) {
-  background-color: Lightgreen;
+th, td {  
+  width: 25%;
+	padding: 8px;
+
+}
+
+.striped-table > tbody > tr:nth-child(even) {
+  background-color: #eee;
 }

@@ -1,7 +1,5 @@
 export interface UserTableProps {
-    users:       User[]
-    strippedTable:  boolean
-    //actionRemove: (user: User) => void
+    users:          User[]
 }
 
 export interface UserItemProps {
