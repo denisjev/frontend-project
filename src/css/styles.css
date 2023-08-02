@@ -1,0 +1,25 @@
+table, tr {
+  border-color: black;
+  border-style: solid;
+  border-width: 1px;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td {
+  padding: 25px;
+}
+
+.stripped-table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.stripped-table th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+.stripped-table > tbody > tr:nth-child(even) {
+  background-color: Lightgreen;
+}
