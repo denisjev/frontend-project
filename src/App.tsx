@@ -10,7 +10,7 @@ function App() {
   const [errorLoad, setErrorLoad] = useState<boolean>(false)
 
   useEffect(()  => {
-    fetch('https://randomuser.me/api/?results=10')
+    fetch('https://randomuser.me/api/?results=100')
       .then(res => res.json())
       .then(data => { 
         setUsers(data.results)

@@ -111,7 +111,9 @@ export default function UserTable({ users }: UserTableProps) {
           </tr>
           </thead>
           <tbody>
+            <>
             { userListRender }
+            </>
           </tbody>
         </table>
 
