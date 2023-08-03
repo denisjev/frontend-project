@@ -4,7 +4,7 @@ export interface UserTableProps {
 
 export interface UserItemProps {
     user:           User
-    actionRemove: (user: User) => void
+    handleRemoveUser: (user: User) => void
 }
 
 export interface User {
