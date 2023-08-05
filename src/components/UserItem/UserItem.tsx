@@ -1,4 +1,4 @@
-import { UserItemProps } from "../types/UserType"
+import { UserItemProps } from "../../types/UserType"
 
   export default function UserItem({ user, handleRemoveUser  } : UserItemProps ) {
 

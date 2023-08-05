@@ -1,25 +1,28 @@
 import './App.css'
-import UserTable from './components/UserTable'
+import UserTable from './components/UserTable/UserTable'
 import { User } from "./types/UserType"
-import { useState, useEffect } from 'react'
-
+import { useState, useEffect, useRef } from 'react'
+import { UserService } from './services/UserServices'
 
 function App() {
 
   const [users, setUsers] = useState<Array<User>>([])
   const [errorLoad, setErrorLoad] = useState<boolean>(false)
+  const initialized = useRef(false)
+
 
   useEffect(()  => {
-    fetch('https://randomuser.me/api/?results=100')
-      .then(res => res.json())
-      .then(data => { 
-        setUsers(data.results)
+    UserService.getAll()
+      .then((data:User[]) => { 
+        if (!initialized.current) {
+          initialized.current = true
+          setUsers(data)
+        }
       })
       .catch(err => {
         console.log(err)
         setErrorLoad(true)
       })
-      console.log("Cargado datos")
   },[])
   
   if(errorLoad) return <h1>Ha habido un problema al cargar los datos</h1>

@@ -1,10 +1,10 @@
 import { useState, useRef } from "react"
-import { User, UserTableProps } from "../types/UserType"
-import UserItem from "./UserItem"
-import '../css/UserTableStyles.css'
+import { User, UserTableProps } from "../../types/UserType"
+import UserItem from "../UserItem/UserItem"
+import '../../css/UserTableStyles.css'
 
 export default function UserTable({ users }: UserTableProps) {
-        
+       
     const [usersTable, setUsersTable] = useState(users) 
     const [stripedTable, setStripedTable ] = useState<boolean>(false)
     const [notFoundCountry, setNotFoundCountry] = useState<boolean>(false)
@@ -12,7 +12,8 @@ export default function UserTable({ users }: UserTableProps) {
     const sortOrderColumn = useRef('');
     const completeUserData = useRef(users);
     
-    
+    console.log(users)
+
     const handleRemoveUser = (user: User):void => {
       const userFiltered = completeUserData.current.filter(current => current.login.uuid != user.login.uuid)
       completeUserData.current = userFiltered

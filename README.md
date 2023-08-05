@@ -11,4 +11,6 @@ npm install
 npm run dev
 ```
 
-Luego acceder desde el navegador a la URL que muestra la salida del comando anterior.
+Luego acceder desde el navegador a la URL que muestra la salida del comando anterior. 
+
+Nota: La URL a la cual la API se conecta se encuetra en el archivo app.config.ts
